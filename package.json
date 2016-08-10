@@ -1,0 +1,22 @@
+{
+    "name": "gallery",
+    "version": "0.0.1",
+    "description": "allow to share medias between `hl2-backend` & `hl2-ui`.",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack",
+        "deploy": "npm run build && tools/deploy.sh"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hl2/hl2-gallery.git"
+    },
+    "bugs": {
+        "url": "https://github.com/hl2/hl2-gallery/issues"
+    },
+    "homepage": "https://github.com/hl2/hl2-gallery#readme",
+    "devDependencies": {
+        "image-webpack-loader": "2.0.0",
+        "webpack": "1.13.1"
+    }
+}
