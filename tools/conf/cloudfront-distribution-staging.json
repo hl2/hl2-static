@@ -1,92 +1,92 @@
 {
-  "CallerReference": "cloudfront-<WebsiteName>",
-  "Aliases": {
-    "Quantity": 1,
-    "Items": [
-      "<WebsiteName>"
-    ]
-  },
-  "DefaultRootObject": "index.js",
-  "WebACLId": "",
-  "Origins": {
-    "Quantity": 1,
-    "Items": [{
-      "Id": "S3-<WebsiteName>",
-      "DomainName": "<DomainName>",
-      "OriginPath": "",
-      "CustomHeaders": {
-        "Quantity": 0
-      },
-      "S3OriginConfig": {
-        "OriginAccessIdentity": ""
-      }
-    }]
-  },
-  "DefaultCacheBehavior": {
-    "TargetOriginId": "S3-<WebsiteName>",
-    "ForwardedValues": {
-      "QueryString": false,
-      "Cookies": {
-        "Forward": "none",
-        "WhitelistedNames": {
-          "Quantity": 0
-        }
-      },
-      "Headers": {
-        "Quantity": 0
-      }
-    },
-    "TrustedSigners": {
-      "Enabled": false,
-      "Quantity": 0
-    },
-    "ViewerProtocolPolicy": "redirect-to-https",
-    "MinTTL": 0,
-    "AllowedMethods": {
-      "Items": [
-        "HEAD",
-        "GET"
-      ],
-      "CachedMethods": {
+    "CallerReference": "cloudfront-<WebsiteName>",
+    "Aliases": {
+        "Quantity": 1,
         "Items": [
-          "HEAD",
-          "GET"
-        ],
-        "Quantity": 2
-      },
-      "Quantity": 2
+            "<WebsiteName>"
+        ]
     },
-    "SmoothStreaming": false,
-    "DefaultTTL": 86400,
-    "MaxTTL": 31536000,
-    "Compress": true
-  },
-  "ViewerCertificate": {
-    "SSLSupportMethod": "sni-only",
-    "ACMCertificateArn": "arn:aws:acm:us-east-1:052453599393:certificate/e29fb4d2-9279-479d-b863-8e34e0bd0633",
-    "MinimumProtocolVersion": "TLSv1",
-    "Certificate": "arn:aws:acm:us-east-1:052453599393:certificate/e29fb4d2-9279-479d-b863-8e34e0bd0633",
-    "CertificateSource": "acm"
-  },
-  "CacheBehaviors": {
-    "Quantity": 0
-  },
-  "Logging": {
-    "Bucket": "",
-    "Prefix": "",
-    "Enabled": false,
-    "IncludeCookies": false
-  },
-  "CustomErrorResponses": {
-    "Quantity": 0
-  },
-  "Restrictions": {
-    "GeoRestriction": {
-      "RestrictionType": "none",
-      "Quantity": 0
-    }
-  },
-  "Comment": "Staging CDN",
-  "PriceClass": "PriceClass_100",
-  "Enabled": true
+    "DefaultRootObject": "index.js",
+    "WebACLId": "",
+    "Origins": {
+        "Quantity": 1,
+        "Items": [{
+            "Id": "S3-<WebsiteName>",
+            "DomainName": "<DomainName>",
+            "OriginPath": "",
+            "CustomHeaders": {
+                "Quantity": 0
+            },
+            "S3OriginConfig": {
+                "OriginAccessIdentity": ""
+            }
+        }]
+    },
+    "DefaultCacheBehavior": {
+        "TargetOriginId": "S3-<WebsiteName>",
+        "ForwardedValues": {
+            "QueryString": false,
+            "Cookies": {
+                "Forward": "none",
+                "WhitelistedNames": {
+                    "Quantity": 0
+                }
+            },
+            "Headers": {
+                "Quantity": 0
+            }
+        },
+        "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+        },
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "MinTTL": 0,
+        "AllowedMethods": {
+            "Items": [
+                "HEAD",
+                "GET"
+            ],
+            "CachedMethods": {
+                "Items": [
+                    "HEAD",
+                    "GET"
+                ],
+                "Quantity": 2
+            },
+            "Quantity": 2
+        },
+        "SmoothStreaming": false,
+        "DefaultTTL": 86400,
+        "MaxTTL": 31536000,
+        "Compress": true
+    },
+    "ViewerCertificate": {
+        "SSLSupportMethod": "sni-only",
+        "ACMCertificateArn": "arn:aws:acm:us-east-1:052453599393:certificate/bfcfd7ff-45a1-4161-88d8-a8cf74c2c2b9",
+        "MinimumProtocolVersion": "TLSv1",
+        "Certificate": "arn:aws:acm:us-east-1:052453599393:certificate/bfcfd7ff-45a1-4161-88d8-a8cf74c2c2b9",
+        "CertificateSource": "acm"
+    },
+    "CacheBehaviors": {
+        "Quantity": 0
+    },
+    "Logging": {
+        "Bucket": "",
+        "Prefix": "",
+        "Enabled": false,
+        "IncludeCookies": false
+    },
+    "CustomErrorResponses": {
+        "Quantity": 0
+    },
+    "Restrictions": {
+        "GeoRestriction": {
+            "RestrictionType": "none",
+            "Quantity": 0
+        }
+    },
+    "Comment": "Staging CDN",
+    "PriceClass": "PriceClass_100",
+    "Enabled": true
 }

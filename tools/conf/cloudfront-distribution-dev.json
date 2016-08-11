@@ -63,9 +63,9 @@
     },
     "ViewerCertificate": {
         "SSLSupportMethod": "sni-only",
-        "ACMCertificateArn": "arn:aws:acm:us-east-1:052453599393:certificate/e29fb4d2-9279-479d-b863-8e34e0bd0633",
+        "ACMCertificateArn": "arn:aws:acm:us-east-1:052453599393:certificate/bfcfd7ff-45a1-4161-88d8-a8cf74c2c2b9",
         "MinimumProtocolVersion": "TLSv1",
-        "Certificate": "arn:aws:acm:us-east-1:052453599393:certificate/e29fb4d2-9279-479d-b863-8e34e0bd0633",
+        "Certificate": "arn:aws:acm:us-east-1:052453599393:certificate/bfcfd7ff-45a1-4161-88d8-a8cf74c2c2b9",
         "CertificateSource": "acm"
     },
     "CacheBehaviors": {
