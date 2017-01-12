@@ -4,8 +4,10 @@
   "description": "Static content for HL2 projects",
   "private": true,
   "scripts": {
+    "clean": "rimraf dist",
     "build": "webpack",
     "deploy": "./tools/deploy",
+    "prebuild": "npm run clean",
     "predeploy": "npm run build"
   },
   "repository": {
@@ -17,6 +19,7 @@
   "homepage": "https://github.com/hl2/hl2-static#readme",
   "devDependencies": {
     "image-webpack-loader": "3.1.0",
+    "rimraf": "2.5.4",
     "webpack": "1.14.0"
   }
 }
