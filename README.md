@@ -2,15 +2,22 @@ HL2 Static
 ==========
 
 - [Description](#description)
-- [Deploy](#deploy)
+- [Tasks](#tasks)
+  - [Deploy](#deploy)
 
 Description
 -----------
 
 Static content for HL2 projects
 
-Deploy
-------
+Tasks
+-----
+
+- `npm install` install dependencies
+- `npm run clean` clean up
+- `npm run build` run clean task
+
+### Deploy
 
 To deploy a version run the following command:
 
