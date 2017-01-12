@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "deploy": "npm run build && tools/deploy.sh"
+    "deploy": "./tools/deploy",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
