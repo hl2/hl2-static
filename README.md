@@ -1,13 +1,21 @@
-# HL2 static
+HL2 Static
+==========
 
-## Description
+- [Description](#description)
+- [Deploy](#deploy)
 
-This project allow to share medias between `hl2-backend` & `hl2-ui`.
+Description
+-----------
 
-## How to deploy ?
+Static content for HL2 projects
 
-To Deploy a version run the following commands :
+Deploy
+------
+
+To deploy a version run the following command:
+
 ```
-npm run deploy -- --environment [dev | staging | prod]
+  $ npm run deploy -- --environment [dev | staging | prod]
 ```
-**Please, check that your local Git repository is up to date. Use `git fetch origin master --dry-run`**
+
+**Please, use `git fetch origin master --dry-run` to check that your local Git repository is up to date.**
