@@ -1,8 +1,8 @@
 {
-  "name": "static",
+  "name": "hl2-static",
   "version": "0.0.1",
-  "description": "allow to share medias between `hl2-backend` & `hl2-ui`.",
-  "main": "index.js",
+  "description": "Static content for HL2 projects",
+  "private": true,
   "scripts": {
     "build": "webpack",
     "deploy": "npm run build && tools/deploy.sh"
@@ -11,9 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/hl2/hl2-static.git"
   },
-  "bugs": {
-    "url": "https://github.com/hl2/hl2-static/issues"
-  },
+  "author": "HL2 group",
+  "license": "Copyright (C) HL2 group",
   "homepage": "https://github.com/hl2/hl2-static#readme",
   "devDependencies": {
     "image-webpack-loader": "3.1.0",
