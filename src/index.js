@@ -1,4 +1,4 @@
-require('./images/logo_lt_600.png');
-require('./images/socialnetwork_facebook_48.png');
-require('./images/socialnetwork_link_48.png');
-require('./images/socialnetwork_twitter_48.png');
+require('./images/email/hl2-panorama-logo-longeur.png');
+require('./images/email/social-link-facebook.png');
+require('./images/email/social-link-hl2.png');
+require('./images/email/social-link-twitter.png');
