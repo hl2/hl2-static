@@ -57,8 +57,8 @@
             "Quantity": 2
         },
         "SmoothStreaming": false,
-        "DefaultTTL": 86400,
-        "MaxTTL": 31536000,
+        "DefaultTTL": 0,
+        "MaxTTL": 0,
         "Compress": true
     },
     "ViewerCertificate": {
@@ -86,7 +86,7 @@
             "Quantity": 0
         }
     },
-    "Comment": "Staging CDN",
+    "Comment": "HL2 CDN",
     "PriceClass": "PriceClass_100",
     "Enabled": true
 }

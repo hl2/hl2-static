@@ -20,13 +20,12 @@ Tasks
 
 ### Deploy
 
-To deploy a version run the following command:
+To deploy a version on CloudFront run the following command:
+> Please, check that your local Git repository is clean and up to date before deploy
 
 ```
-  $ npm run deploy -- --environment [dev | staging | prod]
+  $ npm run deploy -- [--environment (dev|staging|prod)
 ```
-
-**Please, use `git fetch origin master --dry-run` to check that your local Git repository is up to date.**
 
 License
 -------
