@@ -1,5 +1,5 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: path.join(__dirname, 'src'),
@@ -12,7 +12,7 @@ module.exports = {
             test: /\.(jpe?g|png|gif|svg)$/i,
             loaders: [
                 'file?name=[path][name].[ext]&context=src',
-                'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+                'image-webpack?optimizationLevel=7&interlaced=false'
             ]
         }]
     }
