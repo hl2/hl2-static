@@ -3,6 +3,7 @@ HL2 Static
 
 - [Description](#description)
 - [Tasks](#tasks)
+  - [Release](#release)
   - [Deploy](#deploy)
 - [License](#license)
 
@@ -17,6 +18,16 @@ Tasks
 - `npm install` install dependencies
 - `npm run clean` clean up
 - `npm run build` run clean task
+
+### Release
+
+To release a branch run the following commands:
+> Please, check that your local Git repository is clean before release
+
+```
+  $ git checkout branchname
+  $ npm run release [major | minor | patch | premajor | preminor | prepatch | prerelease]
+```
 
 ### Deploy
 
