@@ -97,8 +97,9 @@ fi
 
 echo "[INFO] S3: Check for existing bucket"
 s3BucketList=$(aws s3 ls) || errexit "Could not get S3 bucket list"
+bucketExists=$(echo $s3BucketList | grep -c $websiteName)
 
-if [ `echo $s3BucketList | grep -c "$websiteName" ` -le 0 ]; then
+if [ $bucketExists -le 0 ]; then
   echo "[INFO] S3: Create website bucket"
   aws s3 mb s3://$websiteName || errexit "Could not create S3 bucket"
 fi
@@ -119,31 +120,28 @@ echo "[INFO] CloudFront: Check for existing distribution"
 cloudfrontDistributionId=$(aws cloudfront list-distributions \
   --query 'DistributionList.Items[?Aliases.Items[0]==`'$websiteName'`].Id | [0]' \
   --output text) || errexit "Could not check for existing distribution"
-  
-if [[ $cloudfrontDistributionId = "null" ]]; then
+
+if [[ $cloudfrontDistributionId = "None" ]]; then
   echo "[INFO] CloudFront: Create distribution"
   cloudfrontDistributionDomainName=$(aws cloudfront create-distribution \
     --distribution-config "$distributionConfig" \
-    --query Distribution.DomainName) || errexit "Could not create CloudFront distribution"
+    --query Distribution.DomainName
+    --output text) || errexit "Could not create CloudFront distribution"
 else
   echo "[INFO] CloudFront: Update distribution"
   cloudfrontDistributionETag=$(aws cloudfront get-distribution \
     --id $cloudfrontDistributionId \
     --query ETag \
     --output text) || errexit "Could not get distribution ETag"
-    
+
   cloudfrontDistributionDomainName=$(aws cloudfront update-distribution \
     --id $cloudfrontDistributionId \
     --if-match $cloudfrontDistributionETag \
     --distribution-config "$distributionConfig" \
     --query Distribution.DomainName \
     --output text) || errexit "Could not update distribution"
-fi    
-  
-echo "[INFO] CloudFront: Wait until distribution is deployed"
-aws cloudfront wait distribution-deployed \
-  --id $cloudfrontDistributionId || errexit "Could not wait distribution deployment"
-  
+fi
+
 echo "[INFO] Route53: Build record set configuration"
 recordsetConfig=$(<$ROUTE53_RECORDSET_CONFIG_FILE)
 recordsetConfig=${recordsetConfig//<WebsiteName>/$websiteName}
