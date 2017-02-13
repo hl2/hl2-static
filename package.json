@@ -1,6 +1,6 @@
 {
   "name": "hl2-static",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Static content for HL2 projects",
   "private": true,
   "scripts": {
