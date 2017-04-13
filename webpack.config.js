@@ -1,10 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
+    context: __dirname,
     devtool: 'cheap-eval-source-map',
-    entry: path.join(__dirname, 'src'),
+    entry: './src',
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'index.js'
@@ -44,8 +46,9 @@ module.exports = {
         ]
     },
     plugins: [
+      new FaviconsWebpackPlugin('./src/favicon.png'),
       new HtmlWebpackPlugin({
-        template: 'src/index.html',
+        template: './src/index.html',
       }),
     ],
 };
