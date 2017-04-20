@@ -27,10 +27,14 @@ module.exports = {
                     },
                     {
                       loader: 'image-webpack-loader',
-                      options: {
-                        optimizationLevel: 7,
-                        interlaced: false,
-                      },
+                      query: {
+                        gifsicle: {
+                          interlaced: false,
+                        },
+                        optipng: {
+                          optimizationLevel: 7,
+                        },
+                      }
                     },
                 ]
             },
