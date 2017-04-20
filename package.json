@@ -30,6 +30,6 @@
     "image-webpack-loader": "3.3.0",
     "rimraf": "2.6.1",
     "serve": "5.1.4",
-    "webpack": "2.3.3"
+    "webpack": "2.4.1"
   }
 }
