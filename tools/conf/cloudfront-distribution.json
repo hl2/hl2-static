@@ -6,7 +6,7 @@
             "<WebsiteName>"
         ]
     },
-    "DefaultRootObject": "index.js",
+    "DefaultRootObject": "index.html",
     "WebACLId": "",
     "Origins": {
         "Quantity": 1,
