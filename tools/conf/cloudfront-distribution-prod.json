@@ -10,17 +10,19 @@
     "WebACLId": "",
     "Origins": {
         "Quantity": 1,
-        "Items": [{
-            "Id": "S3-<WebsiteName>",
-            "DomainName": "<DomainName>",
-            "OriginPath": "",
-            "CustomHeaders": {
-                "Quantity": 0
-            },
-            "S3OriginConfig": {
-                "OriginAccessIdentity": ""
+        "Items": [
+            {
+                "Id": "S3-<WebsiteName>",
+                "DomainName": "<DomainName>",
+                "OriginPath": "",
+                "CustomHeaders": {
+                    "Quantity": 0
+                },
+                "S3OriginConfig": {
+                    "OriginAccessIdentity": ""
+                }
             }
-        }]
+        ]
     },
     "DefaultCacheBehavior": {
         "TargetOriginId": "S3-<WebsiteName>",
@@ -36,7 +38,7 @@
                 "Quantity": 0
             },
             "QueryStringCacheKeys": {
-              "Quantity": 0
+                "Quantity": 0
             }
         },
         "TrustedSigners": {
@@ -60,18 +62,18 @@
             "Quantity": 2
         },
         "SmoothStreaming": false,
-        "DefaultTTL": 0,
-        "MaxTTL": 0,
+        "DefaultTTL": 86400,
+        "MaxTTL": 31536000,
         "Compress": true,
         "LambdaFunctionAssociations": {
-          "Quantity": 0
+            "Quantity": 0
         }
     },
     "ViewerCertificate": {
         "SSLSupportMethod": "sni-only",
-        "ACMCertificateArn": "arn:aws:acm:us-east-1:052453599393:certificate/9b0694ac-576a-4f7b-b2de-0b9e4f9d9808",
+        "ACMCertificateArn": "arn:aws:acm:us-east-1:052453599393:certificate/7ae50e58-ddb6-4159-a8bc-7a684372cc12",
         "MinimumProtocolVersion": "TLSv1",
-        "Certificate": "arn:aws:acm:us-east-1:052453599393:certificate/9b0694ac-576a-4f7b-b2de-0b9e4f9d9808",
+        "Certificate": "arn:aws:acm:us-east-1:052453599393:certificate/7ae50e58-ddb6-4159-a8bc-7a684372cc12",
         "CertificateSource": "acm"
     },
     "CacheBehaviors": {
@@ -92,7 +94,7 @@
             "Quantity": 0
         }
     },
-    "Comment": "HL2 CDN",
+    "Comment": "Production CDN",
     "PriceClass": "PriceClass_100",
     "HttpVersion": "http1.1",
     "Enabled": true

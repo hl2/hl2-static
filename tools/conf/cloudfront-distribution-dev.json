@@ -1,0 +1,101 @@
+{
+    "CallerReference": "cloudfront-<WebsiteName>",
+    "Aliases": {
+        "Quantity": 1,
+        "Items": [
+            "<WebsiteName>"
+        ]
+    },
+    "DefaultRootObject": "index.html",
+    "WebACLId": "",
+    "Origins": {
+        "Quantity": 1,
+        "Items": [
+            {
+                "Id": "S3-<WebsiteName>",
+                "DomainName": "<DomainName>",
+                "OriginPath": "",
+                "CustomHeaders": {
+                    "Quantity": 0
+                },
+                "S3OriginConfig": {
+                    "OriginAccessIdentity": ""
+                }
+            }
+        ]
+    },
+    "DefaultCacheBehavior": {
+        "TargetOriginId": "S3-<WebsiteName>",
+        "ForwardedValues": {
+            "QueryString": false,
+            "Cookies": {
+                "Forward": "none",
+                "WhitelistedNames": {
+                    "Quantity": 0
+                }
+            },
+            "Headers": {
+                "Quantity": 0
+            },
+            "QueryStringCacheKeys": {
+                "Quantity": 0
+            }
+        },
+        "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+        },
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "MinTTL": 0,
+        "AllowedMethods": {
+            "Items": [
+                "HEAD",
+                "GET"
+            ],
+            "CachedMethods": {
+                "Items": [
+                    "HEAD",
+                    "GET"
+                ],
+                "Quantity": 2
+            },
+            "Quantity": 2
+        },
+        "SmoothStreaming": false,
+        "DefaultTTL": 86400,
+        "MaxTTL": 31536000,
+        "Compress": true,
+        "LambdaFunctionAssociations": {
+            "Quantity": 0
+        }
+    },
+    "ViewerCertificate": {
+        "SSLSupportMethod": "sni-only",
+        "ACMCertificateArn": "arn:aws:acm:us-east-1:084781960087:certificate/b4bf2d6a-225b-4f86-b989-7d80341c6f71",
+        "MinimumProtocolVersion": "TLSv1",
+        "Certificate": "arn:aws:acm:us-east-1:084781960087:certificate/b4bf2d6a-225b-4f86-b989-7d80341c6f71",
+        "CertificateSource": "acm"
+    },
+    "CacheBehaviors": {
+        "Quantity": 0
+    },
+    "Logging": {
+        "Bucket": "",
+        "Prefix": "",
+        "Enabled": false,
+        "IncludeCookies": false
+    },
+    "CustomErrorResponses": {
+        "Quantity": 0
+    },
+    "Restrictions": {
+        "GeoRestriction": {
+            "RestrictionType": "none",
+            "Quantity": 0
+        }
+    },
+    "Comment": "Development CDN",
+    "PriceClass": "PriceClass_100",
+    "HttpVersion": "http1.1",
+    "Enabled": true
+}
