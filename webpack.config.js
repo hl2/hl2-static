@@ -29,17 +29,6 @@ module.exports = {
                 name: '[path][name].[ext]',
             },
           },
-          {
-            loader: 'image-webpack-loader',
-            query: {
-              gifsicle: {
-                interlaced: false,
-              },
-              optipng: {
-                optimizationLevel: 7,
-              },
-            },
-          },
         ],
       }
     ]
