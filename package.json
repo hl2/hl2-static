@@ -17,8 +17,8 @@
     "type": "git",
     "url": "git+https://github.com/hl2/hl2-static.git"
   },
-  "author": "HL2 group",
-  "license": "Copyright (C) HL2 group",
+  "author": "hl2",
+  "license": "Copyright (C) hl2",
   "homepage": "https://github.com/hl2/hl2-static#readme",
   "devDependencies": {
     "file-loader": "0.11.1",
