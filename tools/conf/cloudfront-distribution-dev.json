@@ -67,13 +67,14 @@
         "Compress": true,
         "LambdaFunctionAssociations": {
             "Quantity": 0
-        }
+        },
+        "FieldLevelEncryptionId": ""
     },
     "ViewerCertificate": {
+        "ACMCertificateArn": "arn:aws:acm:us-east-1:084781960087:certificate/f477dd43-0fd4-4274-8b27-cb7394294fd7",
         "SSLSupportMethod": "sni-only",
-        "ACMCertificateArn": "arn:aws:acm:us-east-1:084781960087:certificate/b4bf2d6a-225b-4f86-b989-7d80341c6f71",
         "MinimumProtocolVersion": "TLSv1",
-        "Certificate": "arn:aws:acm:us-east-1:084781960087:certificate/b4bf2d6a-225b-4f86-b989-7d80341c6f71",
+        "Certificate": "arn:aws:acm:us-east-1:084781960087:certificate/f477dd43-0fd4-4274-8b27-cb7394294fd7",
         "CertificateSource": "acm"
     },
     "CacheBehaviors": {
