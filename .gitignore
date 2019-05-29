@@ -1,15 +1,4 @@
-# MacOS
-.DS_Store
-
-# IntelliJ
-.idea/
-*.iml
-*.ipr
-*.iws
-
-# NPM
-node_modules
-npm-debug.log
-
-# Build
 dist/
+node_modules/
+.DS_Store
+*.log
