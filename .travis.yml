@@ -1,0 +1,15 @@
+language: node_js
+script:
+- npm run build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: "$GITHUB_TOKEN"
+  local-dir: dist
+  target-branch: gh-pages
+  on:
+    branch: master
+notifications:
+  email: false
+env:
+  secure: jSjmlpKnR9eJW3wgStIks42K8D6Env7fBdaqfEiICIec7OWEtXGvvyNE2IvWVM9Ul6YVPruNP6drmRmYiFlbsi3fu2qn2e4QbL3KJspnS/y0+fjt21iaQGpINYYG/MoXcMHCVkszkuC74/kKbBdYrB+vI+SeXw29aZoQourVUnskcfKRt/SxAR9D4odHBoi71hS086SQFCJELTNKa8j8GswWQZpBAkeJRZcs3ss/y0h94URTbrijrySRTSfbcXvUP6uw9vHza7YQ4r5ILOrYyyJqgddnZc7XpErvz+Hu5uo55MZaCGskqIazuCeFC69hioRlyoH1o1U1/9hMu3W7eZNwfQs7BWPXONDn+gjkFyjzydbhWIeuzdQdLkb8cqfwCd9vyS9dC1hu0druQHMO5jtB+baBZn6R1OEM6JsE0ClPK3i0kUTpgcZirVYZhSKWQjWSyVBa0O3xraSZ59JBsRQA07YUumVNStWB01ipHri0kezznjEuZyE26XKKEPS46rpvBMQduVXIsk7K2qFeKdAcFNEL8msM4NsqU3nr1H7xzVillhn10ZKeYlKzRrxwSJqRmSnVWdpBUEH0bcJH6EmlMyF/4li67+SlSjQKZYspnHdHkyElwjIkW5IHornD+QL/ZLu5/h0oo96UTJaszqtQMvbWd04yihb1as+g27c=
