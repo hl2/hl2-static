@@ -10,4 +10,4 @@ Static web resources for hl2 projects
 
 ## License
 
-See [License.md](./License.md).
+See [LICENSE.md](./LICENSE.md)
