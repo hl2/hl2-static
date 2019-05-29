@@ -6,6 +6,7 @@ Static web resources for hl2 projects
 
 - `clean`: clean up
 - `build`: build static resources
+- `release`: release project
 
 ## License
 

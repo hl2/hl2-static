@@ -13,12 +13,9 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack",
-    "deploy": "./tools/deploy",
-    "release": "npm version -m 'Release version %s'",
+    "release": "npm version -m 'Release %s'",
     "prebuild": "npm run clean",
-    "prerelease": "npm run build",
-    "postrelease": "git push origin HEAD --tags",
-    "predeploy": "npm run build"
+    "prerelease": "npm run build"
   },
   "devDependencies": {
     "file-loader": "0.11.1",
