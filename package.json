@@ -1,7 +1,14 @@
 {
-  "name": "hl2-static",
+  "name": "static.hl2.com",
+  "description": "Static resources for hl2 projects",
   "version": "0.2.2",
-  "description": "Static content for HL2 projects",
+  "author": "hl2",
+  "license": "Copyright (C) hl2",
+  "homepage": "https://github.com/hl2/hl2-static#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hl2/hl2-static.git"
+  },
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
@@ -13,13 +20,6 @@
     "postrelease": "git push origin HEAD --tags",
     "predeploy": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hl2/hl2-static.git"
-  },
-  "author": "hl2",
-  "license": "Copyright (C) hl2",
-  "homepage": "https://github.com/hl2/hl2-static#readme",
   "devDependencies": {
     "file-loader": "0.11.1",
     "html-loader": "0.4.5",
