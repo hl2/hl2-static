@@ -12,7 +12,7 @@
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
-    "build": "webpack",
+    "build": "webpack && cp src/CNAME dist/CNAME",
     "release": "npm version -m 'Release %s'",
     "prebuild": "npm run clean",
     "prerelease": "npm run build"
